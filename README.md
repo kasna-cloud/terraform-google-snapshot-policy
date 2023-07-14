@@ -10,10 +10,10 @@ This Terraform module will do the following:
 
 After configuration is completed by Terraform, you will be able to configure your server for backups and restores.
 
-## Scheduling Backups
+## Scheduling Snapshots
 
-A backup schedule can be configured to operate daily, weekly, or every Nth hour.
-To configure a backup schedule, fill in the corresponding `start_time` of the desired schedule type. 
+A snapshot schedule can be configured to operate daily, weekly, or every Nth hour.
+To configure a snapshot schedule, fill in the corresponding `start_time` of the desired schedule type. 
 - If you opt for an hourly schedule, you must also provide an `hours_in_cycle` value.
 - If you opt for a weekly schedule, you must also provide a `day` value. e.g. `"MONDAY"`
 
@@ -37,6 +37,7 @@ To configure a backup schedule, fill in the corresponding `start_time` of the de
 |------|------|
 | [google_compute_disk_resource_policy_attachment.attachment](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_disk_resource_policy_attachment) | resource |
 | [google_compute_resource_policy.main](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_resource_policy) | resource |
+| [google_project_service.compute](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
 
 ## Inputs
 
