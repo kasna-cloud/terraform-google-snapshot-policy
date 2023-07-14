@@ -24,9 +24,7 @@ resource "google_compute_disk" "disk_to_backup_2" {
 }
 
 module "snapshot-policy" {
-  # source      = "kasna-cloud/snapshot-policy/google"
-  source = "../"
-
+  source      = "kasna-cloud/snapshot-policy/google"
   disks       = [google_compute_disk.disk_to_backup.name, google_compute_disk.disk_to_backup_2.name]
   policy_name = "snapshot-policy"
 
